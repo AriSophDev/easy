@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EASY CLEAN PRO</title>
+    <link rel="stylesheet" href="./Easy Clean pro/style carrusel.css">
+    <link rel="stylesheet" href="./Easy Clean pro/style header.css">
+    <link rel="stylesheet" href="./Easy Clean pro/style easyclean.css">
+    <link rel="stylesheet" href="./Easy Clean pro/style video.css">
+    <link rel="stylesheet" href="./Easy Clean pro/style producto.css">
+    <link rel="stylesheet" href="./Easy Clean pro/style footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="./Easy Clean pro/Cart.css">
+</head>
+<body> 
+    <header class="header-ecp">
+        <div class="container">
+          <span class="menu-icon" id="menuIcon" title="Menú">
+            <i class="fas fa-bars"></i>
+          </span>
+          
+          <a class="logo-text" href="">EASY CLEAN PRO</a>  
+      
+          <button class="cart-btn" id="cartBtn" title="Carrito">
+            <span id="cart-count-badge"></span>
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+      
+        
+          <div id="cartContainer" class="container-cart-products hidden-cart">
+            <button class="cart-close-btn" id="cartCloseBtn" aria-label="Cerrar carrito">&times;</button>
+            <p id="cart-empty">El carrito está vacío</p>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+              <h3>Total:</h3>
+              <span id="total-pagar">$0</span>
+            </div>
+            <button class="btn-carrito" id="btnVaciarCarro">
+                <span class="material-symbols-outlined">remove_shopping_cart</span>
+                Vaciar carro
+            </button>
+            <button class="btn-carrito" id="btnComprar">
+                <span class="material-symbols-outlined">shopping_bag</span>
+                Comprar
+            </button>
+        </div>
+      
+        </div>
+      
+        <nav class="header-nav">
+          <a href="./index.html"><i class="fas fa-home"></i> Inicio</a>
+          <a href="./producto/index.html"><i class="fas fa-box-open"></i> Producto</a>
+          <a href="./contacto/index.html"><i class="fas fa-phone"></i> Contacto</a>
+        </nav>
+      </header>
+
+      <div class="cart-overlay" id="cartOverlay"></div>  
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <nav class="menu-dropdown" id="menuDropdown">
+        <div class="menu-header">
+            <span class="menu-title">Menú</span>
+            <span class="close-menu" id="closeMenu">&times;</span>
+        </div>
+        <ul>
+            <li><a href=""><i class="fas fa-home"></i> Inicio</a></li>
+            <a href="#"><i class="fas fa-box-open"></i> Producto</a>
+            <li><a href="#"><i class="fas fa-phone"></i> Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <section class="carrusel">
+            <div class="carrusel-slide active">
+                    <img src="./Easy Clean pro/Imagen de WhatsApp 2025-05-05 a las 10.31.27_8cb9e694.jpg" alt="Producto 1">
+                <div class="carrusel-info">
+                    <h2>EASY CLEAN PRO</h2>
+                    <button>Comprar</button>
+                </div>
+            </div>
+            <div class="carrusel-slide">
+                <img src="./Easy Clean pro/Imagen de WhatsApp 2025-05-05 a las 10.31.24_1fbd8fdb.jpg" alt="Producto 2">
+                <div class="carrusel-info">
+                    <h2>SUELAS AMARILLAS?</h2>
+                    <p>SOLUCIONALO COMO CIENTOS DE CLIENTES LO HACEN</p>
+                    <button>Comprar</button>
+                </div>
+            </div>
+            <div class="carrusel-controles">
+                <button id="prev">&#10094;</button>
+                <button id="next">&#10095;</button>
+            </div>
+        </section>
+    </div>
+
+    <section class="easyclean-bg-section">
+        <div class="easyclean-overlay"></div>
+        <div class="easyclean-content">
+            <h2 class="fade-in">¿Por qué usar Easy Clean Pro?</h2>
+            <div class="easyclean-features">
+                <div class="feature fade-in">
+                    <span class="material-symbols-outlined">water_drop</span>
+                    <h3>Eficiencia</h3>
+                    <p>Limpieza profunda con solo una gota. Máximo rendimiento, mínimo desperdicio.</p>
+                </div>
+                <div class="feature fade-in">
+                    <span class="material-symbols-outlined">bolt</span>
+                    <h3>Resultados inmediatos</h3>
+                    <p>Obtén superficies limpias en segundos, sin esfuerzo adicional.</p>
+                </div>
+                <div class="feature fade-in">
+                    <span class="material-symbols-outlined">checkroom</span>
+                    <h3>Cuidado profesional</h3>
+                    <p>Ideal para todo tipo de calzado y textiles, sin dañarlos.</p>
+                </div>
+                <div class="feature fade-in">
+                    <span class="material-symbols-outlined">eco</span>
+                    <h3>Seguro y ecológico</h3>
+                    <p>Fórmula no tóxica y respetuosa con el medio ambiente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="video-section" id="videoSection">
+        <h2 class="video-title">VIDEO</h2>
+        <div class="video-container">
+            <video id="easyCleanVideo" width="100%" height="auto" playsinline controls poster="poster.jpg">
+                <source src="./Easy Clean pro/Video.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+            </video>
+        </div>
+    </section>
+    
+    <section class="producto-section">
+        <div class="producto-card">
+            <div class="producto-img-container">
+                <img src="./Easy Clean pro/ChatGPT_Image_25_abr_2025_14_38_47.webp" alt="Easy Clean Pro" class="producto-img">
+            </div>
+            <div class="producto-info">
+                <h2 class="producto-title">Easy Clean Pro</h2>
+                <div class="producto-precio-stock">
+                    <span class="producto-precio">$12.990</span>
+                    <span class="producto-stock">En stock</span>
+                </div>
+                <div class="producto-btns">
+                    <button class="btn-carrito agregar-carro">
+                        <span class="material-symbols-outlined">add_shopping_cart</span>
+                        Incluir al carrito
+                    </button>
+                    <a href="./producto/index.html" class="btn-especificaciones">
+                        <span class="material-symbols-outlined">info</span>
+                        Ver especificaciones
+                    </a>
+                </div>
+                <div class="producto-cantidad">
+                    <button type="button" class="cantidad-btn" id="restarCantidad" aria-label="Restar">-</button>
+                    <input type="number" id="cantidadProducto" min="1" max="10" value="1">
+                    <button type="button" class="cantidad-btn" id="sumarCantidad" aria-label="Sumar">+</button>
+                </div>
+        </div>
+    </section>
+
+    <footer class="footer-ecp">
+        <div class="footer-content">
+            <span class="footer-logo">EASY CLEAN PRO</span>
+            <div class="footer-social">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/XXXXXXXXXXX" target="_blank" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <span class="footer-copy">&copy; 2025 Easy Clean. Todos los derechos reservados.</span>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('.header-ecp');
+            const body = document.body;
+            function onScroll() {
+                if(window.scrollY > 20) {
+                    header.classList.add('scrolled');
+                    body.classList.add('body-padding-header');
+                } else {
+                    header.classList.remove('scrolled');
+                    body.classList.remove('body-padding-header');
+                }
+            }
+            window.addEventListener('scroll', onScroll);
+            onScroll();
+        });
+        </script>
+        <script src="./Easy Clean pro/footer.js"></script>
+        <script src="./Easy Clean pro/producto.js"></script>
+        <script src="./Easy Clean pro/video.js"></script>
+        <script src="./Easy Clean pro/style header.css"></script>
+    <script src="Easy Clean pro/style header.css"></script>
+    <script src="./Easy Clean pro/carrusel.js"></script>
+    <script src="./Easy Clean pro/menu.js"></script>
+</body>
+</html>

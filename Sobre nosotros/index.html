@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="style header.css">
+    <link rel="stylesheet" href="style footer.css">
+
+</head>
+<body>
+
+ <header class="header-ecp">
+        <div class="container">
+          <span class="menu-icon" id="menuIcon" title="Menú">
+            <i class="fas fa-bars"></i>
+          </span>      
+          <a class="logo-text" href="">EASY CLEAN PRO</a>  
+        </div>
+        <nav class="header-nav">
+          <a href=""><i class="fas fa-home"></i> Inicio</a>
+          <a href="#"><i class="fas fa-box-open"></i> Producto</a>
+          <a href="#"><i class="fas fa-phone"></i> Contacto</a>
+        </nav>
+      </header>
+
+      <div style="height: 4rem;"></div>
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <nav class="menu-dropdown" id="menuDropdown">
+        <div class="menu-header">
+            <span class="menu-title">Menú</span>
+            <span class="close-menu" id="closeMenu">&times;</span>
+        </div>
+        <ul>
+            <li><a href=""><i class="fas fa-home"></i> Inicio</a></li>
+            <a href="#"><i class="fas fa-box-open"></i> Producto</a>
+            <li><a href="#"><i class="fas fa-phone"></i> Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section class="sobre-nosotros-section anim-in">
+  <div class="sobre-nosotros-bg"></div>
+  <div class="sobre-nosotros-content">
+    <h2 class="sobre-nosotros-titulo">Sobre Nosotros</h2>
+    <p class="sobre-nosotros-descripcion">
+      En <strong>Easy Clean Pro</strong> Todo comenzó con una pasión por los detalles y un amor por las cosas que realmente importan. Como alguien que valora cada momento y cada experiencia, me di cuenta de que nuestros objetos más queridos, como nuestros tenis, merecen el mejor cuidado. Fue así como nació la idea de EasyCleanPro: un producto que no solo limpia, sino que protege lo que amas.
+
+En EasyCleanPro, creemos que cada par de tenis cuenta una historia, y queremos ser parte de esa narrativa. No somos solo un limpiador de tenis; somos la esencia que cuida tus recuerdos y te acompaña en cada paso que das.
+
+Nuestra misión es ofrecer un producto que no solo limpia, sino que también cuida
+y preserva lo que realmente importa para ti. Nos dedicamos a asegurarnos de que cada par de tenis, cada artículo que amas, reciba el tratamiento que se merece, porque entendemos que no son solo objetos, son partes de tu vida.
+
+Al elegir EasyCleanPro, eliges cuidar lo que amas con un producto que entiende la importancia de los detalles y la conexión emocional que tienes con tus pertenencias. Porque en EasyCleanPro, no solo limpiamos, sino que cuidamos lo que amas.<br><br>
+    <div class="sobre-nosotros-valores">
+      <div class="valor">
+        <span class="material-symbols-outlined">verified</span>
+        <h4>Calidad</h4>
+        <p>Productos y servicios que cumplen los más altos estándares.</p>
+      </div>
+      <div class="valor">
+        <span class="material-symbols-outlined">handshake</span>
+        <h4>Compromiso</h4>
+        <p>Relación cercana y responsable con nuestros clientes y el entorno.</p>
+      </div>
+      <div class="valor">
+        <span class="material-symbols-outlined">eco</span>
+        <h4>Sustentabilidad</h4>
+        <p>Procesos y productos amigables con el medio ambiente.</p>
+      </div>
+      <div class="valor">
+        <span class="material-symbols-outlined">groups</span>
+        <h4>Equipo</h4>
+        <p>Personas apasionadas, capacitadas y orientadas al servicio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Agrega esto en tu <head> si no lo tienes -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+<style>
+.sobre-nosotros-section {
+    position: relative;
+    max-width: 1100px;
+    margin: 6rem auto 3rem auto;
+    padding: 4rem 2rem 3rem 2rem;
+    background: linear-gradient(120deg, #1a2236f8 70%, #22314af8 100%);
+    border-radius: 2.5rem;
+    box-shadow: 0 24px 80px 0 #2563eb77, 0 4px 24px #5a7ca822, 0 0 0 18px #22314a33 inset;
+    overflow: hidden;
+    z-index: 2;
+    animation: fadeInUpSobre 1.2s cubic-bezier(.4,0,.2,1);
+}
+.sobre-nosotros-bg {
+    position: absolute;
+    inset: -60px;
+    border-radius: 3rem;
+    z-index: 0;
+    pointer-events: none;
+    background: 
+        radial-gradient(circle at 60% 30%, #60a5fa55 0%, #2563eb00 80%),
+        radial-gradient(circle at 20% 80%, #7c9fff33 0%, #22314a00 70%),
+        radial-gradient(circle at 80% 10%, #60a5fa33 0%, #2563eb00 80%);
+    filter: blur(48px) brightness(1.18);
+    opacity: 0.85;
+    animation: sobreGlow 5s ease-in-out infinite alternate;
+}
+@keyframes sobreGlow {
+    0% { filter: blur(48px) brightness(1.18); opacity: 0.85; }
+    50% { filter: blur(80px) brightness(1.28); opacity: 1; }
+    100% { filter: blur(48px) brightness(1.18); opacity: 0.85; }
+}
+@keyframes fadeInUpSobre {
+    0% { opacity: 0; transform: translateY(40px) scale(0.98);}
+    100% { opacity: 1; transform: none;}
+}
+.sobre-nosotros-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.sobre-nosotros-titulo {
+    font-size: 2.7rem;
+    font-weight: 900;
+    color: #eaf6ff;
+    margin-bottom: 1.2rem;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 24px #2563eb77;
+    animation: fadeInUpSobre 1.4s 0.1s both;
+}
+.sobre-nosotros-descripcion {
+    font-size: 1.25rem;
+    color: #b3c8e6;
+    margin-bottom: 2.2rem;
+    text-shadow: 0 2px 12px #22314a77;
+    line-height: 1.7;
+    font-weight: 500;
+    max-width: 800px;
+    animation: fadeInUpSobre 1.6s 0.2s both;
+}
+.sobre-nosotros-mision {
+    color: #60a5fa;
+    font-weight: 700;
+    font-size: 1.1em;
+}
+.sobre-nosotros-valores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.2rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+    z-index: 2;
+}
+.valor {
+    background: linear-gradient(120deg, #22314a 80%, #2563eb 100%);
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 24px #22314a44;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    min-width: 180px;
+    max-width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.25s, box-shadow 0.25s;
+    animation: fadeInUpSobre 1.7s both;
+}
+.valor:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 32px #60a5fa77;
+}
+.valor .material-symbols-outlined {
+    font-size: 2.7rem;
+    color: #60a5fa;
+    margin-bottom: 0.7rem;
+    filter: drop-shadow(0 4px 16px #60a5fa55);
+}
+.valor h4 {
+    color: #eaf6ff;
+    font-size: 1.18rem;
+    font-weight: 800;
+    margin: 0.5rem 0 0.2rem 0;
+    letter-spacing: 1px;
+}
+.valor p {
+    color: #b3c8e6;
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .sobre-nosotros-section {
+        padding: 2.2rem 0.7rem 1.5rem 0.7rem;
+        border-radius: 1.5rem;
+    }
+    .sobre-nosotros-titulo {
+        font-size: 2rem;
+    }
+    .sobre-nosotros-descripcion {
+        font-size: 1.05rem;
+    }
+    .valor {
+        min-width: 140px;
+        max-width: 180px;
+        padding: 1.2rem 0.7rem 1rem 0.7rem;
+    }
+}
+@media (max-width: 600px) {
+    .sobre-nosotros-section {
+        padding: 1.2rem 0.2rem 0.7rem 0.2rem;
+        border-radius: 0.7rem;
+    }
+    .sobre-nosotros-titulo {
+        font-size: 1.2rem;
+    }
+    .sobre-nosotros-descripcion {
+        font-size: 0.92rem;
+    }
+    .sobre-nosotros-valores {
+        gap: 1rem;
+    }
+    .valor {
+        min-width: 110px;
+        max-width: 98vw;
+        padding: 0.7rem 0.3rem 0.7rem 0.3rem;
+    }
+    .valor .material-symbols-outlined {
+        font-size: 2rem;
+    }
+}
+</style>
+
+  <footer class="footer-ecp">
+        <div class="footer-content">
+            <span class="footer-logo">EASY CLEAN PRO</span>
+            <div class="footer-social">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/XXXXXXXXXXX" target="_blank" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <span class="footer-copy">&copy; 2025 Easy Clean. Todos los derechos reservados.</span>
+        </div>
+    </footer>
+    <script src="menu.js"></script>
+    <script src="header.js"></script>
+</body>
+</html>

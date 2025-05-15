@@ -1,0 +1,268 @@
+/* Sección principal */
+.easyclean-bg-section {
+    position: relative;
+    min-height: 200vh;
+    width: 100%;
+    background: 
+        linear-gradient(180deg, rgba(34,49,74,0.45) 0%, rgba(0, 0, 0, 0.18) 100%),
+        url('ChatGPT_Image_25_abr_2025_14_38_47.webp') center center/cover no-repeat;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1200px;
+    box-sizing: border-box;
+}
+
+/* Overlay */
+.easyclean-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.22) 0%, rgba(34,49,74,0.10) 100%);
+    z-index: 1;
+    pointer-events: none;
+    animation: overlayFadeIn 2s;
+}
+@keyframes overlayFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Contenido principal */
+.easyclean-content {
+    position: relative;
+    z-index: 2;
+    color: var(--blanco-hueso);
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 12vh 2rem 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: contentFadeIn 1.5s cubic-bezier(.4,0,.2,1);
+    box-sizing: border-box;
+}
+@keyframes contentFadeIn {
+    from { opacity: 0; transform: translateY(-60px) scale(0.98); }
+    to   { opacity: 1; transform: none; }
+}
+
+.easyclean-content h2 {
+    font-family: 'Impact', Impact, Arial, sans-serif;
+    font-size: 2.7rem;
+    margin-bottom: 4rem;
+    letter-spacing: 2px;
+    color: var(--blanco-hueso);
+    text-shadow: 0 2px 18px var(--azul-grisaseo), 0 8px 32px #0008;
+    animation: titlePopIn 1.2s cubic-bezier(.4,0,.2,1);
+}
+@keyframes titlePopIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+/* Características */
+.easyclean-features {
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.feature {
+    background: rgba(41,64,90,0.96);
+    border-radius: 1rem;
+    padding: 2rem 2rem 1.5rem 2rem;
+    min-width: 260px;
+    max-width: 420px;
+    box-shadow: 0 4px 24px var(--sombra-azul-fuerte), 0 1.5px 24px #0004;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-left: 5px solid var(--azul-acento);
+    border-bottom: 2px solid var(--azul-acento);
+    position: relative;
+    opacity: 0;
+    transform: translateY(60px) scale(0.98);
+    transition: 
+        opacity 0.8s cubic-bezier(.4,0,.2,1), 
+        transform 0.8s cubic-bezier(.4,0,.2,1), 
+        box-shadow 0.5s;
+    will-change: transform, opacity;
+    filter: blur(2px);
+}
+
+.feature span {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+    color: var(--azul-acento);
+    background: var(--blanco-hueso);
+    border-radius: 50%;
+    padding: 0.5rem;
+    box-shadow: 0 2px 8px var(--sombra-azul);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature h3 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--blanco-hueso);
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 8px #0003;
+}
+
+.feature p {
+    color: #e0e6ed;
+    font-size: 1.02rem;
+    margin-bottom: 0;
+    font-weight: 400;
+    line-height: 1.5;
+}
+@keyframes iconBounce {
+    from { transform: translateY(0); }
+    to   { transform: translateY(-10px) scale(1.08); }
+}
+
+.feature h3 {
+    font-family: 'Impact', Impact, Arial, sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 0.7rem;
+    color: var(--azul-acento);
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px #0005;
+}
+
+/* Animación de entrada y salida al hacer scroll */
+.fade-in {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translateY(100px) scale(0.95) rotateY(20deg);
+    transition: 
+        opacity 0.9s cubic-bezier(.4,0,.2,1), 
+        transform 0.9s cubic-bezier(.4,0,.2,1), 
+        filter 0.5s;
+}
+.fade-in.visible {
+    opacity: 1 !important;
+    filter: blur(0) !important;
+    transform: translateY(0) scale(1) rotateY(0deg) !important;
+}
+
+/* Aparición progresiva y alternada izquierda/derecha */
+.easyclean-features .feature.fade-in:nth-child(odd) {
+    align-self: flex-start;
+    transform: translate(-120px, 100px) scale(0.95) rotateY(-30deg);
+}
+.easyclean-features .feature.fade-in:nth-child(even) {
+    align-self: flex-end;
+    transform: translate(120px, 100px) scale(0.95) rotateY(30deg);
+}
+
+/* Línea vertical animada en el centro */
+.easyclean-features::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--azul-acento) 0%, transparent 100%);
+    opacity: 0.25;
+    z-index: 0;
+    transform: translateX(-50%);
+    animation: lineGrow 2s cubic-bezier(.4,0,.2,1);
+}
+@keyframes lineGrow {
+    from { height: 0; opacity: 0; }
+    to   { height: 100%; opacity: 0.25; }
+}
+
+/* Responsive */
+/* General: Ajustes para pantallas pequeñas */
+@media (max-width: 1200px) {
+    .easyclean-content {
+        padding: 10vh 1.5rem 3rem 1.5rem;
+    }
+    .easyclean-content h2 {
+        font-size: 2.2rem;
+        margin-bottom: 3rem;
+    }
+    .easyclean-features {
+        gap: 5rem;
+    }
+    .feature {
+        padding: 2rem 1.5rem;
+        min-width: 220px;
+        max-width: 90%;
+    }
+}
+
+/* Para pantallas medianas (tabletas) */
+@media (max-width: 900px) {
+    .easyclean-bg-section{
+        min-height: 150vh;
+    }
+    .easyclean-content {
+        padding: 8vh 1rem 2.5rem 1rem;
+    }
+    .easyclean-content h2 {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+    }
+    .easyclean-features {
+        gap: 3rem;
+    }
+    .feature {
+        padding: 1.5rem 1rem;
+        min-width: 180px;
+        max-width: 95%;
+        border-radius: 1rem;
+    }
+    .easyclean-features::before {
+        width: 3px;
+    }
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    .easyclean-content {
+        padding: 6vh 0.5rem 2rem 0.5rem;
+    }
+    .easyclean-content h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    .easyclean-features {
+        gap: 2rem;
+    }
+    .feature {
+        padding: 1rem 0.8rem;
+        min-width: 0;
+        width: 100%;
+        border-radius: 0.8rem;
+        border-left: 2px solid var(--azul-acento);
+    }
+    .easyclean-features::before {
+        width: 2px;
+    }
+}
+
+/* Ajustes adicionales para pantallas muy pequeñas */
+@media (max-width: 400px) {
+    .easyclean-bg-section{
+        min-height: 150vh;
+    }
+    .easyclean-content h2 {
+        font-size: 1.5rem;
+    }
+    .feature {
+        padding: 0.8rem 0.5rem;
+    }
+}

@@ -1,0 +1,25 @@
+/* Agrega esto en style whatsaap.css */
+.btn-whatsapp {
+    position: fixed;
+    right: 2.2rem;
+    bottom: 2.2rem;
+    z-index: 9999;
+    background: #25d366;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 58px;
+    height: 58px;
+    font-size: 2.4rem;
+    box-shadow: 0 6px 32px #22314a44;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    text-decoration: none;
+}
+.btn-whatsapp:hover {
+    background: #1ebe5d;
+    transform: scale(1.12);
+}

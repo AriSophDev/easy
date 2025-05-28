@@ -203,9 +203,18 @@
         </div>
     </section>
 
-    <button id="btnSubir" class="btn-subir" aria-label="Subir al inicio">
-    <span class="material-symbols-outlined">arrow_upward</span>
-</button>
+   <section class="comentarios-section" id="comentariosSection">
+  <h2 class="comentarios-title">Comentarios de Usuarios</h2>
+  <div class="comentarios-list" id="comentariosList"></div>
+  <form id="comentariosForm" class="comentarios-form">
+    <input type="text" id="nombreUsuarioInput" class="comentario-input nombre-usuario-input" placeholder="Tu nombre (opcional)">
+    <textarea id="comentarioInput" class="comentario-input" rows="3"
+      placeholder="Escribe tu comentario..."></textarea>
+    <button type="submit" class="comentario-submit">Enviar</button>
+  </form>
+</section>
+
+     
 
 <a href="https://wa.me/XXXXXXXXXXX" class="btn-whatsapp" target="_blank" aria-label="WhatsApp">
     <i class="fab fa-whatsapp"></i>

@@ -1,0 +1,157 @@
+/* Sección de reseñas: entrada y salida de toda la sección */
+.reseñas-section {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: linear-gradient(120deg, #1a2236f8 70%, #22314af8 100%);
+  border-radius: 2.5rem;
+  box-shadow:
+    0 24px 80px #2563eb77,
+    0 4px 24px #5a7ca822,
+    inset 0 0 0 18px #22314a33;
+  color: #eaf6ff;
+  overflow: hidden;
+  position: relative;
+  /* Estado inicial oculto para animar */
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Fade in al entrar */
+.reseñas-section.in {
+  animation: fadeInUp 0.8s forwards ease-out;
+}
+/* Fade out al salir */
+.reseñas-section.exit {
+  animation: fadeOutDown 0.8s forwards ease-in;
+}
+
+/* Título */
+.reseñas-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 4px 24px #2563eb77;
+}
+
+/* Contenedor de chat */
+.reseñas-chat {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Burbuja base */
+.reseña-bubble {
+  --delay: 0s;            /* defínelo inline: style="--delay:0.3s" */
+  --dir: 1;               /* 1 = derecha, -1 = izquierda */
+  max-width: 75%;
+  padding: 1rem 1.5rem;
+  border-radius: 1.5rem;
+  background: #60a5fa;
+  opacity: 0;
+  transform: translateX(calc(100% * var(--dir)));
+  transition: box-shadow 0.3s ease;
+}
+
+/* Alineación segun emisor */
+.from-user {
+  --dir: -1;
+  background: #2563eb;
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+}
+.from-other {
+  --dir: 1;
+  background: #60a5fa;
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+}
+
+/* Entrada de cada burbuja */
+.reseña-bubble.in {
+  animation:
+    slideIn 0.6s forwards ease-out var(--delay),
+    pulseLight 4s infinite alternate calc(var(--delay) + 0.6s);
+}
+
+/* Salida de cada burbuja */
+.reseña-bubble.exit {
+  animation: slideOutUp 0.6s forwards ease-in var(--delay);
+}
+
+/* Hover: zoom y luz */
+.reseña-bubble:hover {
+  box-shadow: 0 0 24px rgba(255,255,255,0.8);
+}
+
+/* Autor */
+.reseña-author {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #b3c8e6;
+  text-align: right;
+}
+
+/* Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(calc(100% * var(--dir)));
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideOutUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+@keyframes pulseLight {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(255,255,255,0.2);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(255,255,255,0.6);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .reseñas-title {
+    font-size: 2rem;
+  }
+  .reseña-bubble {
+    max-width: 90%;
+    padding: 0.8rem 1.2rem;
+    font-size: 0.95rem;
+  }
+}

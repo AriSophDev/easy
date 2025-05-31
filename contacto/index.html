@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,21 +10,22 @@
     <link rel="stylesheet" href="style footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
+
 <body>
 
     <header class="header-ecp">
         <div class="container">
-          <span class="menu-icon" id="menuIcon" title="Menú">
-            <i class="fas fa-bars"></i>
-          </span>      
-          <a class="logo-text" href="">EASY CLEAN PRO</a>  
+            <span class="menu-icon" id="menuIcon" title="Menú">
+                <i class="fas fa-bars"></i>
+            </span>
+            <a class="logo-text" href="">EASY CLEAN PRO</a>
         </div>
         <nav class="header-nav">
-          <a href="../index.html"><i class="fas fa-home"></i> Inicio</a>
-          <a href="../producto/index.html"><i class="fas fa-box-open"></i> Producto</a>
-          <a href="../contacto/index.html"><i class="fas fa-phone"></i> Contacto</a>
+            <a href="../index.html"><i class="fas fa-home"></i> Inicio</a>
+            <a href="../producto/index.html"><i class="fas fa-box-open"></i> Producto</a>
+            <a href="../contacto/index.html"><i class="fas fa-phone"></i> Contacto</a>
         </nav>
-      </header>
+    </header>
     <div class="menu-overlay" id="menuOverlay"></div>
     <nav class="menu-dropdown" id="menuDropdown">
         <div class="menu-header">
@@ -37,25 +39,30 @@
         </ul>
     </nav>
 
-    <main style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; min-height:calc(100vh - 120px);">
+    <main
+        style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; min-height:calc(100vh - 120px);">
         <section class="contact-section">
             <h2 class="contact-title"><i class="fas fa-envelope"></i> Contáctanos</h2>
             <form action="https://formsubmit.co/your@email.com" method="POST" class="contact-form">
                 <div class="form-group">
                     <label for="nombre"><i class="fas fa-user"></i> Nombre</label>
-                    <input type="text" id="nombre" name="nombre" required autocomplete="off" placeholder="Tu nombre completo">
+                    <input type="text" id="nombre" name="nombre" required autocomplete="off"
+                        placeholder="Tu nombre completo">
                 </div>
                 <div class="form-group">
                     <label for="correo"><i class="fas fa-envelope"></i> Correo</label>
-                    <input type="email" id="correo" name="correo" required autocomplete="off" placeholder="tucorreo@ejemplo.com">
+                    <input type="email" id="correo" name="correo" required autocomplete="off"
+                        placeholder="tucorreo@ejemplo.com">
                 </div>
                 <div class="form-group">
                     <label for="telefono"><i class="fas fa-phone"></i> Teléfono</label>
-                    <input type="tel" id="telefono" name="telefono" required autocomplete="off" placeholder="Ej: 5551234567" pattern="[0-9]{7,15}">
+                    <input type="tel" id="telefono" name="telefono" required autocomplete="off"
+                        placeholder="Ej: 5551234567" pattern="[0-9]{7,15}">
                 </div>
                 <div class="form-group">
                     <label for="comentario"><i class="fas fa-comment-dots"></i> Comentario</label>
-                    <textarea id="comentario" name="comentario" rows="4" required placeholder="¿En qué podemos ayudarte?"></textarea>
+                    <textarea id="comentario" name="comentario" rows="4" required
+                        placeholder="¿En qué podemos ayudarte?"></textarea>
                 </div>
                 <button type="submit" class="contact-btn"><i class="fas fa-paper-plane"></i> Enviar</button>
             </form>
@@ -82,4 +89,5 @@
     <script src="menu.js"></script>
     <script src="header.js"></script>
 </body>
+
 </html>

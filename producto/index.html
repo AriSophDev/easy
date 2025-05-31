@@ -1,160 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EASY CLEAN PRO - PRODUCTO</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link rel="stylesheet" href="style header.css">
-    <link rel="stylesheet" href="Cart.css">
-    <link rel="stylesheet" href="style producto.css">
-    <link rel="stylesheet" href="style footer.css">
-    <link rel="stylesheet" href="../Whatsapp/style subir.css">
-    <link rel="stylesheet" href="../Whatsapp/style whatsaap.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EASY CLEAN PRO - PRODUCTO</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="style header.css">
+  <link rel="stylesheet" href="Cart.css">
+  <link rel="stylesheet" href="style producto.css">
+  <link rel="stylesheet" href="style footer.css">
+  <link rel="stylesheet" href="../Whatsapp/style subir.css">
+  <link rel="stylesheet" href="../Whatsapp/style whatsaap.css">
 </head>
+
 <body>
-     <header class="header-ecp">
-        <div class="container">
-          <span class="menu-icon" id="menuIcon" title="Menú">
-            <i class="fas fa-bars"></i>
-          </span>
-          
-          <a class="logo-text" href="">EASY CLEAN PRO</a>  
-      
-          <button class="cart-btn" id="cartBtn" title="Carrito">
-            <span id="cart-count-badge"></span>
-            <i class="fas fa-shopping-cart"></i>
-          </button>
-      
-        
-          <div id="cartContainer" class="container-cart-products hidden-cart">
-            <button class="cart-close-btn" id="cartCloseBtn" aria-label="Cerrar carrito">&times;</button>
-            <p id="cart-empty">El carrito está vacío</p>
-            <div id="cart-items"></div>
-            <div class="cart-total">
-              <h3>Total:</h3>
-              <span id="total-pagar">$0</span>
-            </div>
-            <button class="btn-carrito" id="btnVaciarCarro">
-                <span class="material-symbols-outlined">remove_shopping_cart</span>
-                Vaciar carro
-            </button>
-            <button class="btn-carrito" id="btnComprar">
-                <span class="material-symbols-outlined">shopping_bag</span>
-                Comprar
-            </button>
-        </div>
-      
-        </div>
-      
-        <nav class="header-nav">
-          <a href="../index"><i class="fas fa-home"></i> Inicio</a>
-          <a href="../producto/index.html"><i class="fas fa-box-open"></i> Producto</a>
-          <a href="../contacto/index.html"><i class="fas fa-phone"></i> Contacto</a>
-        </nav>
-      </header>
+  <header class="header-ecp">
+    <div class="container">
+      <span class="menu-icon" id="menuIcon" title="Menú">
+        <i class="fas fa-bars"></i>
+      </span>
 
-      <div class="cart-overlay" id="cartOverlay"></div>  
-    <div class="menu-overlay" id="menuOverlay"></div>
-    <nav class="menu-dropdown" id="menuDropdown">
-        <div class="menu-header">
-            <span class="menu-title">Menú</span>
-            <span class="close-menu" id="closeMenu">&times;</span>
+      <a class="logo-text" href="">EASY CLEAN PRO</a>
+
+      <button class="cart-btn" id="cartBtn" title="Carrito">
+        <span id="cart-count-badge"></span>
+        <i class="fas fa-shopping-cart"></i>
+      </button>
+
+
+      <div id="cartContainer" class="container-cart-products hidden-cart">
+        <button class="cart-close-btn" id="cartCloseBtn" aria-label="Cerrar carrito">&times;</button>
+        <p id="cart-empty">El carrito está vacío</p>
+        <div id="cart-items"></div>
+        <div class="cart-total">
+          <h3>Total:</h3>
+          <span id="total-pagar">$0</span>
         </div>
-        <ul>
-            <li><a href="../index.html"><i class="fas fa-home"></i> Inicio</a></li>
-            <a href="../producto/index.html"><i class="fas fa-box-open"></i> Producto</a>
-            <li><a href="../contacto/index.html"><i class="fas fa-phone"></i> Contacto</a></li>
-        </ul>
+        <button class="btn-carrito" id="btnVaciarCarro">
+          <span class="material-symbols-outlined">remove_shopping_cart</span>
+          Vaciar carro
+        </button>
+        <button class="btn-carrito" id="btnComprar">
+          <span class="material-symbols-outlined">shopping_bag</span>
+          Comprar
+        </button>
+      </div>
+
+    </div>
+
+    <nav class="header-nav">
+      <a href="../index"><i class="fas fa-home"></i> Inicio</a>
+      <a href="../producto/index.html"><i class="fas fa-box-open"></i> Producto</a>
+      <a href="../contacto/index.html"><i class="fas fa-phone"></i> Contacto</a>
     </nav>
+  </header>
 
-    <main>
-  <section class="producto-section">
-    <div class="producto-carrusel">
-      <button class="carrusel-btn prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
-      <div class="carrusel-imagenes">
-        <img src="ChatGPT_Image_25_abr_2025_14_38_47.webp" alt="Easy Clean Pro - Imagen 1" class="carrusel-img active">
-        <img src="Imagen de WhatsApp 2025-05-05 a las 10.31.27_8cb9e694.jpg" alt="Easy Clean Pro - Imagen 2" class="carrusel-img">
-        <img src="Imagen de WhatsApp 2025-05-05 a las 10.31.24_1fbd8fdb.jpg" alt="Easy Clean Pro - Imagen 3" class="carrusel-img">
-          <img src="Imagen de WhatsApp 2025-05-05 a las 10.31.29_fc03f0d5.jpg" alt="Easy Clean Pro - Imagen 4" class="carrusel-img">
-      </div>
-      <button class="carrusel-btn next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="menu-overlay" id="menuOverlay"></div>
+  <nav class="menu-dropdown" id="menuDropdown">
+    <div class="menu-header">
+      <span class="menu-title">Menú</span>
+      <span class="close-menu" id="closeMenu">&times;</span>
     </div>
-    <div class="producto-info">
-      <h1 class="producto-titulo">Easy Clean Pro</h1>
-      <p class="producto-descripcion">
-        El limpiador de zapatos más avanzado, rápido y seguro. ¡Devuelve el brillo y la frescura a tu calzado en segundos!
-      </p>
-      <div class="producto-precio-cantidad">
-        <span class="producto-precio">$12.990</span>
-        <div class="cantidad-selector">
-          <button id="restarCantidad" aria-label="Restar cantidad">-</button>
-          <input type="number" id="cantidadProducto" min="1" max="10" value="1">
-          <button id="sumarCantidad" aria-label="Sumar cantidad">+</button>
+    <ul>
+      <li><a href="../index.html"><i class="fas fa-home"></i> Inicio</a></li>
+      <a href="../producto/index.html"><i class="fas fa-box-open"></i> Producto</a>
+      <li><a href="../contacto/index.html"><i class="fas fa-phone"></i> Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="producto-section">
+      <div class="producto-carrusel">
+        <button class="carrusel-btn prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+        <div class="carrusel-imagenes">
+          <img src="ChatGPT_Image_25_abr_2025_14_38_47.webp" alt="Easy Clean Pro - Imagen 1"
+            class="carrusel-img active">
+          <img src="Imagen de WhatsApp 2025-05-05 a las 10.31.27_8cb9e694.jpg" alt="Easy Clean Pro - Imagen 2"
+            class="carrusel-img">
+          <img src="Imagen de WhatsApp 2025-05-05 a las 10.31.24_1fbd8fdb.jpg" alt="Easy Clean Pro - Imagen 3"
+            class="carrusel-img">
+          <img src="Imagen de WhatsApp 2025-05-05 a las 10.31.29_fc03f0d5.jpg" alt="Easy Clean Pro - Imagen 4"
+            class="carrusel-img">
         </div>
+        <button class="carrusel-btn next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
       </div>
-      <div class="producto-botones">
-        <button class="btn-comprar">Comprar ahora</button>
-        <button class="btn-agregar-carro agregar-carro">Agregar al carro</button>
+      <div class="producto-info">
+        <h1 class="producto-titulo">Easy Clean Pro</h1>
+        <p class="producto-descripcion">
+          El limpiador de zapatos más avanzado, rápido y seguro. ¡Devuelve el brillo y la frescura a tu calzado en
+          segundos!
+        </p>
+        <div class="producto-precio-cantidad">
+          <span class="producto-precio">$12.990</span>
+          <div class="cantidad-selector">
+            <button id="restarCantidad" aria-label="Restar cantidad">-</button>
+            <input type="number" id="cantidadProducto" min="1" max="10" value="1">
+            <button id="sumarCantidad" aria-label="Sumar cantidad">+</button>
+          </div>
+        </div>
+        <div class="producto-botones">
+          <button class="btn-comprar">Comprar ahora</button>
+          <button class="btn-agregar-carro agregar-carro">Agregar al carro</button>
+        </div>
+        <div id="productoFeedback"></div>
       </div>
-      <div id="productoFeedback"></div>
-    </div>
-  </section>
-</main>
- <div class="carrusel-modal-bg" id="carruselModal">
-  <img src="" alt="Vista ampliada" class="carrusel-modal-img" id="carruselModalImg">
-</div>
+    </section>
+  </main>
+  <div class="carrusel-modal-bg" id="carruselModal">
+    <img src="" alt="Vista ampliada" class="carrusel-modal-img" id="carruselModalImg">
+  </div>
 
- <button id="btnSubir" class="btn-subir" aria-label="Subir al inicio">
+  <button id="btnSubir" class="btn-subir" aria-label="Subir al inicio">
     <span class="material-symbols-outlined">arrow_upward</span>
-</button>
+  </button>
 
-<a href="https://wa.me/XXXXXXXXXXX" class="btn-whatsapp" target="_blank" aria-label="WhatsApp">
+  <a href="https://wa.me/XXXXXXXXXXX" class="btn-whatsapp" target="_blank" aria-label="WhatsApp">
     <i class="fab fa-whatsapp"></i>
-</a>
+  </a>
   <footer class="footer-ecp">
-        <div class="footer-content">
-            <span class="footer-logo">EASY CLEAN PRO</span>
-            <div class="footer-social">
-                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://wa.me/XXXXXXXXXXX" target="_blank" aria-label="WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-            </div>
-            <span class="footer-copy">&copy; 2025 Easy Clean. Todos los derechos reservados.</span>
-        </div>
-    </footer>
+    <div class="footer-content">
+      <span class="footer-logo">EASY CLEAN PRO</span>
+      <div class="footer-social">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/XXXXXXXXXXX" target="_blank" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+      <span class="footer-copy">&copy; 2025 Easy Clean. Todos los derechos reservados.</span>
+    </div>
+  </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const header = document.querySelector('.header-ecp');
-            const body = document.body;
-            function onScroll() {
-                if(window.scrollY > 20) {
-                    header.classList.add('scrolled');
-                    body.classList.add('body-padding-header');
-                } else {
-                    header.classList.remove('scrolled');
-                    body.classList.remove('body-padding-header');
-                }
-            }
-            window.addEventListener('scroll', onScroll);
-            onScroll();
-        });
-        </script>
-    <script src="footer.js"></script>
-    <script src="acercar.js"></script>
-    <script src="carrusel.js"></script>
-    <script src="header.js"></script>
-    <script src="producto.js"></script>
-    <script src="menu.js"></script>
-    <script src="../Whatsapp/subir.js"></script>
-    <script src="../Whatsapp/whatsapp.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const header = document.querySelector('.header-ecp');
+      const body = document.body;
+      function onScroll() {
+        if (window.scrollY > 20) {
+          header.classList.add('scrolled');
+          body.classList.add('body-padding-header');
+        } else {
+          header.classList.remove('scrolled');
+          body.classList.remove('body-padding-header');
+        }
+      }
+      window.addEventListener('scroll', onScroll);
+      onScroll();
+    });
+  </script>
+  <script src="footer.js"></script>
+  <script src="acercar.js"></script>
+  <script src="carrusel.js"></script>
+  <script src="header.js"></script>
+  <script src="producto.js"></script>
+  <script src="menu.js"></script>
+  <script src="../Whatsapp/subir.js"></script>
+  <script src="../Whatsapp/whatsapp.js"></script>
 </body>
+
 </html>

@@ -333,6 +333,20 @@ body{
 
 /* RESPONSIVE */
 @media (max-width: 1600px) {
+     .producto-carrusel {
+        flex: 1 1 100%;
+        max-width: 100vw;
+    }
+    .carrusel-imagenes {
+        width: calc(100vw - 2rem);   /* 1rem de margen a cada lado */
+        max-width: none;
+        aspect-ratio: 1 / 1;         /* Siempre cuadrado */
+        height: auto;                /* Se ajusta según el ancho */
+        border-radius: 1.2rem;
+    }
+    .carrusel-img {
+        object-fit: cover;           /* Ocupa todo el contenedor */
+    }
     .producto-section {
         max-width: 99vw;
         padding: 3rem 1.2rem 2rem 1.2rem;
@@ -341,12 +355,7 @@ body{
         max-width: 100%;
         width: 100%;
     }
-    .carrusel-imagenes {
-        width: 520px;
-        height: 520px;
-        max-width: 98vw;
-        max-height: 70vw;
-    }
+
 }
 @media (max-width: 1100px) {
     .producto-section {
@@ -362,7 +371,7 @@ body{
     .carrusel-imagenes {
         width: 98vw;
         max-width: 420px;
-        height: 320px;
+        height: 100vw;
         max-height: 60vw;
     }
     .producto-titulo {
@@ -375,19 +384,28 @@ body{
         font-size: 1.08rem;
         padding: 0.9rem 1.5rem;
     }
-}
+}/* ...código existente... */
 @media (max-width: 700px) {
-    .producto-section {
-        padding: 1.2rem 0.2rem 0.7rem 0.2rem;
-        gap: 1.5rem;
-    }
-    .carrusel-imagenes {
-        width: 98vw;
-        max-width: 98vw;
-        height: 220px;
-        max-height: 50vw;
-        border-radius: 1.2rem;
-    }
+   .producto-section {
+    padding: 0.5rem 0;    /* reducir padding lateral */
+    gap: 1rem;
+  }
+  .producto-carrusel {
+    flex: 1 1 100%;
+    max-width: 100vw;
+    margin: 0;            /* sin márgenes extra */
+  }
+  .carrusel-imagenes {
+    width: 100vw;         /* ancho total */
+    height: calc(100vh - 100px); /* alto casi total de pantalla menos header */
+    max-width: none;
+    max-height: none;
+    border-radius: 0;     /* sin bordes */
+    margin: 0;            /* sin margen */
+  }
+  .carrusel-img {
+    object-fit: cover;    /* ocupa todo el contenedor */
+  }
     .producto-titulo {
         font-size: 1.3rem;
     }
@@ -421,14 +439,26 @@ body{
     }
 }
 @media (max-width: 480px) {
-    .producto-section {
-        padding: 0.5rem 0.1rem 0.5rem 0.1rem;
-        border-radius: 0.7rem;
-    }
-    .carrusel-imagenes {
-        height: 160px;
-        border-radius: 0.7rem;
-    }
+  .producto-carrusel {
+    padding: 0;                      /* ocupa todo el ancho */
+  }
+  .carrusel-btn {
+    margin: 0 2rem;                  /* separa flechas 2rem de los bordes */
+    width: 48px;
+    height: 48px;
+  }
+  .carrusel-imagenes {
+    width: 100vw;                    /* ancho total */
+    height: 100vw;                   /* altura igual al ancho */
+    max-width: none;
+  }
+  .carrusel-img {
+    object-fit: cover;
+  }
+  .carrusel-img {
+    object-fit: cover;   /* ocupa todo el contenedor */
+  }
+
     .producto-titulo {
         font-size: 1.05rem;
     }
@@ -439,4 +469,7 @@ body{
         font-size: 0.85rem;
         padding: 0.5rem 0.5rem;
     }
+
 }
+    
+
